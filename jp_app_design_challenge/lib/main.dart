@@ -13,8 +13,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(
-      // home: HomeScreen(
+      // home: SplashScreen(
+      home: HomeScreen(
       ),
     );
   }
