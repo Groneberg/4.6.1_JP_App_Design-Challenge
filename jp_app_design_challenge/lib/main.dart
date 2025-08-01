@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jp_app_design_challenge/src/features/overlay/widgets/build_temp_screen_three.dart';
 import 'package:jp_app_design_challenge/src/features/home/presentation/screens/home_screen.dart';
 import 'package:jp_app_design_challenge/src/features/splash/presentation/screens/splash_screen.dart';
 
@@ -14,7 +15,8 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: SplashScreen(
-      home: HomeScreen(
+      // home: HomeScreen(
+      home: MyWidget(
       ),
     );
   }
