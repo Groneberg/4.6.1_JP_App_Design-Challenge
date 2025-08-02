@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -22,4 +23,5 @@ flutter:
     - assets/details/
     - assets/grafiken/
     - assets/hintergründe/
+    - assets/svg/
     
