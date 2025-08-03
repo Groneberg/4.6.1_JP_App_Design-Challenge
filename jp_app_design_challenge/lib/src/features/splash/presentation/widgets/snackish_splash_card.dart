@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:jp_app_design_challenge/src/features/home/presentation/screens/home_screen.dart';
 import 'package:jp_app_design_challenge/src/features/splash/presentation/widgets/snackish_splash_card_button.dart';
 
 class SnackishSplashCard extends StatelessWidget {
@@ -70,7 +71,12 @@ class SnackishSplashCard extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 30),
-                SnackishSplashCardButton(),
+                SnackishSplashCardButton(buttonText: "Order Now", navigate: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                );
+                },),
               ],
             ),
           ),

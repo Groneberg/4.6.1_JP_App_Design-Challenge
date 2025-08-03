@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:jp_app_design_challenge/src/features/overlay/widgets/s_v_g_icon.dart';
 
 class OverlayOrderCard extends StatelessWidget {
+  final String productName;
+  final String productPrice;
+  final String productRating;
+
+
   const OverlayOrderCard({
-    super.key,
+    super.key, required this.productName, required this.productPrice, required this.productRating,
   });
 
   @override
@@ -44,7 +49,7 @@ class OverlayOrderCard extends StatelessWidget {
                         SizedBox(
                           width: 50,
                           child: Text(
-                            '♡ 200',
+                            '♡ $productRating',
                             textAlign: TextAlign.start,
                             style: TextStyle(
                               color: const Color(0x99EBEBF5),
@@ -59,10 +64,10 @@ class OverlayOrderCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 280,
                     child: Text(
-                      'Mogli’s Cup',
+                      productName,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
@@ -110,7 +115,7 @@ class OverlayOrderCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '8.99',
+                        productPrice,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,

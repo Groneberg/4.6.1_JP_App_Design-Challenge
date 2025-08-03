@@ -77,9 +77,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 10.0),
             SizedBox(
               height: 262,
-              child: Expanded(
-                child: HomeSubCardListView(),
-              ),
+              child: HomeSubCardListView(),
             )
           ],
         ),

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class SnackishSplashCardButton extends StatelessWidget {
+  final String buttonText;
+  final VoidCallback? navigate;
   const SnackishSplashCardButton({
-    super.key,
+    super.key, required this.buttonText, this.navigate
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: navigate,
       child: Container(
         width: 200,
         height: 48,
@@ -27,15 +29,14 @@ class SnackishSplashCardButton extends StatelessWidget {
               blurRadius: 30.0,
             ),
           ],
-          // borderRadius: BorderRadius.circular(10.0),
           gradient: RadialGradient(
             center: const Alignment(
               0.9689 * 2 - 1,
               0.7083 * 2 - 1,
-            ), // Umrechnung von CSS-Prozent in Flutter-Alignment
+            ),
             radius:
                 280.98 /
-                100, // Radius basierend auf 280.98%
+                100,
             colors: const [
               Color(0xFFF69EA3),
               Color(0xFFE970C4),
@@ -44,7 +45,7 @@ class SnackishSplashCardButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            "Order Now",
+            buttonText,
             style: TextStyle(
               fontSize: 16,
               color: Color.fromRGBO(255, 255, 255, 1.0),
